@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package stringservice;
+
+// Định nghĩa service
+service StringService {
+  // Định nghĩa method Capitalize
+  rpc Capitalize (CapitalizeRequest) returns (CapitalizeResponse);
+}
+
+// Định nghĩa message yêu cầu
+message CapitalizeRequest {
+  string text = 1;
+}
+
+// Định nghĩa message phản hồi
+message CapitalizeResponse {
+  string text = 1;
+}
